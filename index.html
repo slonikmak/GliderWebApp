@@ -1,0 +1,103 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Glider Web App</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+        <link type="text/css" href="Styles/main.css" rel="stylesheet">
+        <script src="http://use.edgefonts.net/source-code-pro:n9,n7,n2,n3,n4,n6,n5,i9,i7,i2,i4,i3,i5,i6:all.js"></script>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="Script/main.js"></script>
+	</head>
+
+	<body>
+        <div id="main">
+            <div id="leftPannel">
+                <ul>
+                    <li data-elem="status"><input type="checkbox" checked>Status</li>
+                    <li data-elem="managment"><input type="checkbox" checked>Managment</li>
+                    <li data-elem="logs"><input type="checkbox" checked>Logs</li>
+                    <li data-elem="gps"><input type="checkbox" checked>GPS</li>
+                    <li data-elem="db"><input type="checkbox" checked>Data Base</li>
+                </ul>
+            </div>
+            <div id="rightPannel">
+                <h2 id="app-header">Glider Web App</h2>
+                <div id="content">
+                    <div class="content-element" id="status">
+                        <h3 class="content-header">Glider status</h3>
+                        <div><label>Voltage</label><label class="value">12V</label></div>
+                        <div><label>Amperage</label><label class="value">3A</label></div>
+                        <div>
+                            <label>Battery charge</label>
+                                <div class="progress" id="battery-bar">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                70%
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label>Presure</label>
+                            <label class="value">1200kPa</label>
+                        </div>
+                        <div>
+                            <label>Hummidity</label>
+                            <label class="value">75%</label>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="content">
+                    <div class="content-element" id="managment">
+                        <h3 class="content-header">Mission Managment</h3>
+                        <div><label>Mission Type</label><label class="value">Some Type</label></div>
+                        <div><label>Mission Name</label><label class="value">Some Name</label></div>                      
+                        <div>
+                            <label>Mission time</label>
+                            <label class="value">12:19</label>
+                        </div>
+                        <div>
+                            <label>Hummidity</label>
+                            <label class="value">75%</label>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div id="content">
+                    <div class="content-element" id="logs">
+                        <h3 class="content-header">Glider Logs</h3>
+                        <div id="log">
+                            <span>Glider says: I am Hungry</span><br/>
+                            <span>Glider says: WTF</span>
+                        </div>
+                        
+                    </div>
+                </div>
+                 <div id="content">
+                    <div class="content-element" id="gps">
+                        <h3 class="content-header">GPS Position</h3>
+                        <div><label>Lat</label><label class="value">192.22.33</label></div>
+                        <div><label>Lon</label><label class="value">22.33.44</label></div>                      
+                        
+                        
+                    </div>
+                </div>
+                <div id="content">
+                    <div class="content-element" id="db">
+                        <h3 class="content-header">Data Base</h3>
+                        <div><label>Size</label><label class="value">19 Mb</label></div>
+                        <div><label>Sessions</label><label class="value">3</label></div>
+                        <button type="button" class="btn btn-default">Download</button>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	</body>
+</html>
