@@ -6,6 +6,9 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0">
         <link type="text/css" href="Styles/main.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+        <script src="Script/map.js"></script>
         <script src="http://use.edgefonts.net/source-code-pro:n9,n7,n2,n3,n4,n6,n5,i9,i7,i2,i4,i3,i5,i6:all.js"></script>
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -29,8 +32,16 @@
                 <div class="content">
                     <div class="content-element" id="status">
                         <h3 class="content-header">Glider status</h3>
-                        <div><label>Voltage</label><label class="value">12V</label></div>
-                        <div><label>Amperage</label><label class="value">3A</label></div>
+                        <div>
+                            <label>Voltage</label>
+                            <label class="value" id="voltage-label">12</label>
+                            <label class="value" style="margin-left:0px">V</label>
+                        </div>
+                        <div>
+                            <label>Amperage</label>
+                            <label class="value" id="aperage-lable">3</label>
+                            <label class="value" style="margin-left:0px">A</label>
+                        </div>
                         <div>
                             <label>Battery charge</label>
                                 <div class="progress" id="battery-bar">
@@ -41,11 +52,23 @@
                         </div>
                         <div>
                             <label>Presure</label>
-                            <label class="value">1200kPa</label>
+                            <label class="value" id="presure-lable">1200</label>
+                            <label class="value" style="margin-left:-5px">kPa</label>
                         </div>
                         <div>
                             <label>Hummidity</label>
-                            <label class="value">75%</label>
+                            <label class="value" id="hummidity-lable">75</label>
+                            <label class="value" style="margin-left:0px">%</label>
+                        </div>
+                        <div>
+                            <label>CPU Temp</label>
+                            <label class="value" id="cputemp-lable">25</label>
+                            <label class="value" style="margin-left:0px">C</label>
+                        </div>
+                        <div>
+                            <label>Inside Temp</label>
+                            <label class="value" id="insidetemp-lable">10</label>
+                            <label class="value" style="margin-left:0px">C</label>
                         </div>
                         
                     </div>
@@ -71,8 +94,9 @@
                     <div class="content-element" id="logs">
                         <h3 class="content-header">Glider Logs</h3>
                         <div id="log">
-                            <span>Glider says: I am Hungry</span><br/>
-                            <span>Glider says: WTF</span>
+                            <a>Log file1</a>
+                            <a>Log file2</a>
+                            <a>Log file3</a>
                         </div>
                         
                     </div>
@@ -81,7 +105,8 @@
                     <div class="content-element" id="gps">
                         <h3 class="content-header">GPS Position</h3>
                         <div><label>Lat</label><label class="value">192.22.33</label></div>
-                        <div><label>Lon</label><label class="value">22.33.44</label></div>                      
+                        <div><label>Lon</label><label class="value">22.33.44</label></div>                   
+                        <div id="mapid"></div>
                         
                         
                     </div>

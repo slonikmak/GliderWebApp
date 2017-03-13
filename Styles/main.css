@@ -65,9 +65,15 @@ label{
 }
 #log{
     width: 300px;
-    height: 200px;
-    border-color: grey;
-    border-style: solid;
-    border-width: 1px;
+    
+   
+}
+#log a{
+    display: block;
+    cursor: pointer
+}
+#mapid { 
+    height: 250px;
+    width: 250px;    
 }
 
